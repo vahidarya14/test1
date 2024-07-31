@@ -1,0 +1,18 @@
+
+<div *ngIf="recipes.length==0"> <img src="/assets/OIP.jpg" alt="image" style="width:100px;"> آیتمی یافت نشد</div>
+
+<div *ngIf="recipes" style="display: table;width:100%; background: white;">
+
+  <div *ngFor="let item of recipes" class="card1" >
+      <button class="fav-btn" [class.active]="item.is_in_Favorite" (click)="removeFromFavorite(item)">🗑️</button>
+      <div  class="card">
+        <div>
+          <h2>{{ item.name }} {{ item.id }}</h2>
+        </div>
+        <div>{{ item.desc }}</div>
+
+        <img src="{{ item.images[0]}}">
+      </div>
+  </div>
+
+</div>

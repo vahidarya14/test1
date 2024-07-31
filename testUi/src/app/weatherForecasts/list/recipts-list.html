@@ -1,0 +1,18 @@
+
+<div *ngIf="!recipes">loading...</div>
+
+<div *ngIf="recipes" style="display: table;width:100%; background: white;">
+
+  <div *ngFor="let item of recipes" class="card">
+    <div>
+      <h2>{{ item.name }} {{ item.id }}</h2>
+    </div>
+    <div>{{ item.desc }}</div>
+    <div>
+      <button class="fav-btn" [class.active]="item.is_in_Favorite" (click)="addToFavorite(item)">🧡save</button>
+    </div>
+    <img src="{{ item.images[0]
+        }}">
+  </div>
+
+</div>
