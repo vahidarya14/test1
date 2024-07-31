@@ -5,13 +5,11 @@
 }
 
 
-nav{
-    height:60px;
-    border-bottom:1px solid gray;
-    margin-bottom:40px;
+nav {
+  height: 60px;
+  border-bottom: 1px solid gray;
+  margin-bottom: 40px;
 }
-
-
   nav > a {
     display: inline-table;
     height: 45px;
@@ -20,10 +18,8 @@ nav{
     font-size: 20px;
     color: blue;
   }
-
-
-    nav > a.active{
-        background:gray;
-        color:white;
-        border-radius: 0 0 0px  0px;
+    nav > a.active {
+      background: #f04d4d;
+      color: white;
+      border-radius: 0 0 0px 0px;
     }
