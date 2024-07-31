@@ -9,6 +9,7 @@ import { MyReciptsComponent } from './add-edit/my_recipts-form';
 import { CookieCHelper } from './coocieHelper'
 
 const heroesRoutes: Routes = [
+  { path: '', redirectTo: '/recipts', pathMatch: 'full' },
   { path: 'recipts', component: ReciptsListComponent },
   { path: 'my_recipts', component: MyReciptsComponent }
 ];
