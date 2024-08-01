@@ -7,6 +7,7 @@ import { ReciptsListComponent } from './list/recipts-list';
 import { MyReciptsComponent } from './add-edit/my_recipts-form';
 
 import { CookieCHelper } from './coocieHelper'
+import { FilterPipe } from './filterPipe';
 
 const heroesRoutes: Routes = [
   { path: '', redirectTo: '/recipts', pathMatch: 'full' },
@@ -21,12 +22,7 @@ const heroesRoutes: Routes = [
     CommonModule,
     FormsModule
   ],
-  declarations: [
-    ReciptsListComponent,
-    MyReciptsComponent
-  ],
-  providers: [
-    CookieCHelper
-  ]
+  declarations: [  ReciptsListComponent, MyReciptsComponent ,FilterPipe ],
+  providers: [    CookieCHelper  ]
 })
 export class ReciptsModule { }

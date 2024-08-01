@@ -9,6 +9,7 @@ nav {
   height: 60px;
   border-bottom: 1px solid gray;
   margin-bottom: 40px;
+  background: whitesmoke;
 }
   nav > a {
     display: inline-table;
@@ -19,7 +20,10 @@ nav {
     color: blue;
   }
     nav > a.active {
-      background: #f04d4d;
-      color: white;
+      /*   background: #f04d4d;
+      color: white;*/
       border-radius: 0 0 0px 0px;
+      -webkit-box-shadow: inset 10px 2px 53px -33px rgba(0,0,0,0.28);
+      -moz-box-shadow: inset 10px 2px 53px -33px rgba(0,0,0,0.28);
+      box-shadow: inset 10px 2px 53px -33px rgba(0,0,0,0.28);
     }

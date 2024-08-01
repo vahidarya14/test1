@@ -1,4 +1,76 @@
 /* You can add global styles to this file, and also import other style files */
-body{
-    margin:0px;
+body {
+  margin: 0px;
+  font-family: "Source Sans Pro", HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif ,Tahoma
+}
+
+
+.w-100 {
+  width: 100%;
+}
+
+.d-table {
+  display: table;
+}
+
+
+.mb-4{
+    margin-bottom:4rem;
+}
+
+
+.card {
+  width: 300px;
+  border-radius: 20px;
+  display: inline-block;
+  height: 350px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background: white;
+  margin-right: 14px;
+  margin-bottom: 14px;
+  overflow: hidden;
+  position: relative;
+  bottom: 0;
+}
+
+
+  .card > img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-height: 180px;
+  }
+
+  .card .img_selector {
+    position: absolute;
+    z-index: 5;
+    /* background: red; */
+    width: 100%;
+    bottom: 7px;
+  }
+    .card .img_selector > button {
+      background: white;
+      border: 1px solid gray;
+      margin: 2px;
+      height: 14px;
+      width: 25px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+      .card .img_selector > button.active {
+        background: red;
+        border: 1px solid red;
+      }
+    /* typical phone screen resolution */
+    @media only screen and (max-width : 667px) {
+      .card {
+    width: 100%;
+  }
+}
+/* landscape orientation */
+@media only screen and (min-width : 375px) and (max-width : 667px) and (orientation : landscape) {
+}
+/* portrait orientation */
+@media only screen and (min-width : 375px) and (max-width : 667px) and (orientation : portrait) {
 }

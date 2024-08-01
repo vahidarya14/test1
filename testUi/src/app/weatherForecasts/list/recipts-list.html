@@ -2,18 +2,24 @@
 <div *ngIf="recipes.length==0"> <img src="/assets/OIP.jpg" alt="image" style="width:100px;"> آیتمی یافت نشد</div>
 <div *ngIf="!recipes">loading...</div>
 
-<div *ngIf="recipes" style="display: table;width:100%; background: white;">
+<div *ngIf="recipes" class="w-100 d-table">
 
-  <div *ngFor="let item of recipes" class="card">
+  <div class="d-table w-100 mb-4">
+    <input [(ngModel)]="searchText" placeholder="🔍" style="padding: 10px;" />
+  </div>
+
+  <div *ngFor="let item of recipes|filter:searchText" class="card">
     <div>
-      <h2>{{ item.name }} {{ item.id }}</h2>
+      <h2>{{ item.name }}</h2>
     </div>
     <div>{{ item.desc }}</div>
     <div>
       <button class="fav-btn" [class.active]="item.is_in_Favorite" (click)="addToFavorite(item)">🧡save</button>
     </div>
-    <img src="{{ item.images[0]
-        }}">
+    <img src="{{ item.images[item.img_index] }}">
+    <div class="img_selector" *ngIf="item.images.length>1">
+      <button *ngFor="let img of item.images;let i = index" (click)="changeImgIndex(item,i)" [class.active]="i==item.img_index"></button>
+    </div>
   </div>
 
 </div>

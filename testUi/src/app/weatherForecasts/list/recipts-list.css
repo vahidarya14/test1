@@ -3,41 +3,6 @@ body {
 }
 
 
-.card {
-  width: 300px;
-  border-radius: 20px;
-  display: inline-block;
-  height: 350px;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  background: white;
-  margin-right: 14px;
-  margin-bottom: 14px;
-  overflow: hidden;
-  position: relative;
-  bottom: 0;
-}
-
-
-  .card > img {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    max-height: 180px;
-  }
-
-/* typical phone screen resolution */
-@media only screen and (max-width : 667px) {
-  .card {
-    width: 100%;
-  }
-}
-/* landscape orientation */
-@media only screen and (min-width : 375px) and (max-width : 667px) and (orientation : landscape) {
-}
-/* portrait orientation */
-@media only screen and (min-width : 375px) and (max-width : 667px) and (orientation : portrait) {
-}
 
 
 .fav-btn {

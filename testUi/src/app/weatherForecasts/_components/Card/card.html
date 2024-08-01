@@ -1,0 +1,15 @@
+
+
+  <div class="card">
+    <div>
+      <h2>{{ recipt.name }} {{ recipt.id }}</h2>
+    </div>
+    <div>{{ recipt.desc }}</div>
+    <div>
+      <button class="fav-btn" [class.active]="recipt.is_in_Favorite" >🧡save</button>
+    </div>
+    <img src="{{ recipt.images[0]
+        }}">
+  </div>
+
+

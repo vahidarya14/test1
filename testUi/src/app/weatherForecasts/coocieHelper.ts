@@ -4,10 +4,10 @@ import { Injectable } from '@angular/core';
 export class CookieCHelper {
 
 
-  getCookie(name: string) {
+  savedReciptCookie()  {
     let ca: Array<string> = document.cookie.split(';');
     let caLen: number = ca.length;
-    let cookieName = `${name}=`;
+    let cookieName = `fav=`;
     let c: string;
 
     for (let i: number = 0; i < caLen; i += 1) {
@@ -16,8 +16,10 @@ export class CookieCHelper {
         return c.substring(cookieName.length, c.length);
       }
     }
-    return '';
+    return '[]';
   }
+
+
 
   deleteCookie(name: string) {
     this.setCookie(name, '', -1);

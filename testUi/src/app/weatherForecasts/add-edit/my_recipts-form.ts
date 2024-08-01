@@ -23,7 +23,7 @@ export class MyReciptsComponent implements OnInit {
   }
 
   getForecasts() {
-    let my_recipes = JSON.parse(this.cookieHelper.getCookie('fav')) as recipe[];
+    let my_recipes = JSON.parse(this.cookieHelper.savedReciptCookie()) as recipe[];
     this.recipes = my_recipes.map((p, i) => ({
       id: p.id,
       name: p.name,
@@ -39,11 +39,12 @@ export class MyReciptsComponent implements OnInit {
 
   removeFromFavorite(recipe: recipe) {
 
-    let my_recipes = JSON.parse(this.cookieHelper.getCookie('fav')) as recipe[];
+    let my_recipes = JSON.parse(this.cookieHelper.savedReciptCookie()) as recipe[];
     my_recipes = my_recipes.filter(obj => obj.id !== recipe.id);
     this.cookieHelper.setCookie('fav', my_recipes, 100);
     this.getForecasts()
   }
 
-  title = 'all recipes';
+  changeImgIndex(item: recipeModel, i: number) { item.img_index = i; }
+
 }
