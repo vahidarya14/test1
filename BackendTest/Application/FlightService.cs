@@ -53,8 +53,8 @@ public class FlightService(AppDbContext db)
         {
             //a new flight if no flight from same airline exists with departure time T’ = T - 7 days (+/- 30 minutes tolerance).
             var f = allflights.Any(x => lst[i].airline_id == x.airline_id &&
-                                       lst[i].dt >= x.discontinued_min &&
-                                       lst[i].dt <= x.discontinued_max);
+                                       lst[i].dt >= x.new_min &&
+                                       lst[i].dt <= x.new_max);
             if (!f)
             {
                 lst[i].status = "new";
